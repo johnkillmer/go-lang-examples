@@ -4,46 +4,46 @@ import "fmt"
 import "time"
 
 func main() {
- 
-  i := 2
-  switch i {
-  case 1:
-  	fmt.Println("one")
-  case 2:
-  	fmt.Println("two")
-  case 3:
-  	fmt.Println("three")
 
-  }
+	i := 2
+	switch i {
+	case 1:
+		fmt.Println("one")
+	case 2:
+		fmt.Println("two")
+	case 3:
+		fmt.Println("three")
 
-  switch time.Now().Weekday() {
-  case time.Saturday, time.Sunday:
-  	fmt.Println("It's the weekend")
-   default:
-   	fmt.Println("It's a weekday")
-  }
+	}
 
-  t := time.Now()
-  switch {
-  case t.Hour() < 12:
-  	fmt.Println("It's before noon")
-  default:
-    fmt.Println("It's after noon")
-  }
+	switch time.Now().Weekday() {
+	case time.Saturday, time.Sunday:
+		fmt.Println("It's the weekend")
+	default:
+		fmt.Println("It's a weekday")
+	}
 
-  whatAmI := func(i interface{}) {
-  	switch t := i.(type) {
-  	case bool:
-  		fmt.Println("It's a boolean")
-    case int:
-    	fmt.Println("It's an int")
-    default:
-    	fmt.Printf("Don't know this type %T\n", t)
-  	}
-  }
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("It's before noon")
+	default:
+		fmt.Println("It's after noon")
+	}
 
-  whatAmI(true)
-  whatAmI("hey")
-  whatAmI(1)
+	whatAmI := func(i interface{}) {
+		switch t := i.(type) {
+		case bool:
+			fmt.Println("It's a boolean")
+		case int:
+			fmt.Println("It's an int")
+		default:
+			fmt.Printf("Don't know this type %T\n", t)
+		}
+	}
+
+	whatAmI(true)
+	whatAmI("hey")
+	whatAmI(1)
 
 }
