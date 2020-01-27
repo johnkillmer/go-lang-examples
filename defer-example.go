@@ -1,9 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"os"
-	"fmt"
 )
 
 func main() {
@@ -16,12 +16,12 @@ func main() {
 func a() {
 	i := 0
 	defer fmt.Println(i)
-	i++ 
+	i++
 	return
 }
 
 func b() {
-	for i:=0; i<4; i++ {
+	for i := 0; i < 4; i++ {
 		defer fmt.Println(i)
 	}
 }
@@ -30,7 +30,6 @@ func c() (i int) {
 	defer func() { i++ }()
 	return 1
 }
-
 
 func CopyFile(dstName, srcName string) (written int64, err error) {
 	src, err := os.Open(srcName)

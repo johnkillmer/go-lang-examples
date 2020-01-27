@@ -22,7 +22,7 @@ func g(i int) {
 	if i > 3 {
 		fmt.Println("Panicking!")
 		panic(fmt.Sprintf("%v", i))
-		return 
+		return
 	}
 
 	defer fmt.Println("Defer in g", i)
