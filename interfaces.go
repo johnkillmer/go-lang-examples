@@ -14,8 +14,8 @@ func (t T) M() {
 	fmt.Println(t.S)
 }
 
-func main(){
-   
-   var i = T{"Hello"}
-   i.M()
+func main() {
+
+	var i = T{"Hello"}
+	i.M()
 }

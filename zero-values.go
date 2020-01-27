@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	var i int
 	var f float
 	var b bool
 	var s string
-	fmt.Println("%v %v %v %q\n", i,f,b,s)
+	fmt.Println("%v %v %v %q\n", i, f, b, s)
 }

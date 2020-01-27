@@ -1,10 +1,10 @@
 package main
 
 import (
- "fmt"
+	"fmt"
 )
 
-func main(){
+func main() {
 	i := 42
-	fmt.Println(i)	
+	fmt.Println(i)
 }
