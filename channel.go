@@ -1,13 +1,15 @@
 package main
 
 import (
-   "fmt"
+	"fmt"
 )
+
 func main() {
 	messages := make(chan string)
 
 	go func() { messages <- "ping" }()
 
 	msg := <-messages
+
 	fmt.Println(msg)
 }
