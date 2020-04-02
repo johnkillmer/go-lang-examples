@@ -16,9 +16,9 @@ func main() {
 		fmt.Println("timer 2 fired")
 	}()
 
-    stop2 := timer2.Stop()
-    if stop2 {
-    	fmt.Println("timer 2 stopped")
-    }
+	stop2 := timer2.Stop()
+	if stop2 {
+		fmt.Println("timer 2 stopped")
+	}
 	time.Sleep(2 * time.Second)
 }
